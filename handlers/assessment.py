@@ -338,8 +338,7 @@ async def confirm_assessment(callback: CallbackQuery, state: FSMContext):
         
         data.update({
             'score': score,
-            'user_id': callback.from_user.id,
-            'blood_pressure': f"{data.get('blood_pressure_systolic', 120)}/{data.get('blood_pressure_diastolic', 80)}"
+            'user_id': callback.from_user.id
         })
         
         await save_health_data(callback.from_user.id, data)        

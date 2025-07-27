@@ -1,5 +1,12 @@
 TOKEN = "7209979809:AAEockbzv5enrkpREs9vzpuxenUWNp-6rk8"
-DATABASE_URL = "postgresql://postgres:123@localhost/med_assistant"
+
+DATABASE_USER = "postgres"
+DATABASE_PASSWORD = "123"
+DATABASE_HOST = "localhost"
+DATABASE_NAME = "med_assistant"
+
+POSTGRES_URL = f"postgresql://{DATABASE_USER}:{DATABASE_PASSWORD}@{DATABASE_HOST}/postgres"
+DATABASE_URL = f"postgresql://{DATABASE_USER}:{DATABASE_PASSWORD}@{DATABASE_HOST}/{DATABASE_NAME}"
 
 WELCOME_TEXT = (
     "Добро пожаловать в 'Персональный оздоровительный помощник'!\n"

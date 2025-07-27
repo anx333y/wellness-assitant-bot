@@ -7,14 +7,10 @@ from handlers.assessment import router as assessment_router
 from handlers.imt import router as imt_router
 from handlers.program import router as program_router
 
-from database.queries import init_db
-
 async def main():
     bot = Bot(token=TOKEN)
     dp = Dispatcher()
 
-    # init_db();
-    
     dp.include_router(base_router)
     dp.include_router(assessment_router)
     dp.include_router(imt_router)

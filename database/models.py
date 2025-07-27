@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, DateTime
+from sqlalchemy import Column, Integer, String, Float, DateTime, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
@@ -19,10 +19,20 @@ class HealthData(Base):
     user_id = Column(Integer)
     gender = Column(String(1))
     age = Column(Integer)
-    heart_rate = Column(Integer)
-    blood_pressure = Column(String)
     weight = Column(Float)
     height = Column(Float)
+    heart_rate = Column(Integer)
+    blood_pressure_systolic = Column(Integer)
+    blood_pressure_diastolic = Column(Integer)
+    vital_capacity = Column(Integer)
+    training_experience = Column(Integer)
+    smoking = Column(Boolean)
+    hardening = Column(Boolean)
+    run_2km = Column(Float)
+    recovery_heart_rate = Column(Float)
+    strength_tests = Column(Integer)
+    colds_frequency = Column(Integer)
+    has_diseases = Column(Boolean)
     score = Column(Float)
     created_at = Column(DateTime)
 
