@@ -6,6 +6,16 @@ from .models import Base, User, HealthData, IMTData
 from typing import Optional
 from datetime import datetime
 
+engine, SessionLocal = None, None
+
+try:
+  engine = create_engine(DATABASE_URL)
+  SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+  Base.metadata.create_all(bind=engine)
+finally:
+  print()
+  
+
 def init_db():
     global engine, SessionLocal
     admin_engine = create_engine(POSTGRES_URL) 

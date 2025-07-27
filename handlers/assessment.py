@@ -362,6 +362,7 @@ async def confirm_assessment(callback: CallbackQuery, state: FSMContext):
             "Произошла ошибка при сохранении результатов. Пожалуйста, попробуйте позже.",
             reply_markup=main_menu
         )
+        print(e)
     finally:
         await callback.answer()
 

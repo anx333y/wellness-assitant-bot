@@ -12,13 +12,15 @@ main_menu = ReplyKeyboardMarkup(
 def get_gender_keyboard():
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="Мужской", callback_data="gender_m")],
-        [InlineKeyboardButton(text="Женский", callback_data="gender_f")]
+        [InlineKeyboardButton(text="Женский", callback_data="gender_f")],
+        [InlineKeyboardButton(text="Отмена", callback_data="cancel_assessment")]
     ])
 
 def get_yes_no_keyboard():
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="Да", callback_data="yes")],
-        [InlineKeyboardButton(text="Нет", callback_data="no")]
+        [InlineKeyboardButton(text="Нет", callback_data="no")],
+        [InlineKeyboardButton(text="Отмена", callback_data="cancel_assessment")]
     ])
 
 def get_cancel_keyboard():
